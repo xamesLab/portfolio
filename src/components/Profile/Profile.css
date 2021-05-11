@@ -1,0 +1,17 @@
+.profile__header {
+    height: 25%;
+    display: flex;
+    padding-left: 30%;
+    padding-bottom: 0.5rem;
+    align-items: flex-end;
+    background-color: rgb(132, 147, 189);
+    position: relative;
+}
+
+.profile__foto {
+    width: 20%;
+    position: absolute;
+    top: 3rem;
+    left: 5%;
+    border: 3px solid white;
+}

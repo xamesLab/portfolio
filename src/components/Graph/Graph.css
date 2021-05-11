@@ -1,0 +1,26 @@
+.wrap-graph {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10%;
+}
+
+.wrap-graph>div {
+    display: flex;
+}
+
+.cell {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.cell-red {
+    background-color: rgb(0, 191, 216);
+}
+
+.cell-green {
+    background-color: rgb(0, 129, 0);
+}

@@ -1,0 +1,94 @@
+.wrap-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+.card {
+    transform-style: preserve-3d;
+    min-height: 29rem;
+    width: 17rem;
+    box-shadow: 0 20px 20px rgb(0, 0, 0, 0.2), 0 0 50px rgb(0, 0, 0, 0.2);
+    padding: 0rem 2rem;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+
+}
+
+.card__img {
+    padding-top: 0.5rem;
+    min-height: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__img img {
+width: 15rem;
+z-index: 2;
+transition: all 0.75s ease-out;
+}
+
+.card__circle {
+width: 9rem;
+height: 9rem;
+background: linear-gradient(to right, #00000080, #d1000080);
+position: absolute;
+border-radius: 50%;
+}
+
+.card__info{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.card__info h3 {
+color: #2c2c2c;
+font-size: 1.5rem;
+padding: 1.7rem 0rem;
+}
+.card__logo img {
+width: 8rem;
+transition: all 0.75s ease-out;
+}
+.card__button {
+display: flex;
+justify-content: space-between;
+transition: all 0.75s ease-out;
+}
+
+.card__button button {
+    background: none;
+    width: 3.6rem;
+    padding: 0.3rem 0rem;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #2c2c2c;
+}
+
+button.active {
+    background-color:#2c2c2c;
+    color: white;
+    font-weight: 400;
+}
+.card__sub {
+padding-top: 3rem;
+width: 70%;
+transition: all 0.75s ease-out;
+}
+
+.card__sub button {
+    width: 100%;
+    padding: 0.3rem 0rem;
+    background-color: rgb(17, 146, 45);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
