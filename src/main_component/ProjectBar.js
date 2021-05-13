@@ -23,9 +23,11 @@ function ProjectBar() {
           <li>
             <NavLink to='/snake'>Змейка</NavLink>
           </li>
-          <li>Калькулятор</li>
+          <li>
+            <NavLink to='/calc'>Калькулятор</NavLink>
+          </li>
           <li>test</li>
-          <li>Крипто-аналитика</li>
+          <li>test2</li>
         </ul>
       </div>
     </div>

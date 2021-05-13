@@ -1,0 +1,26 @@
+.wrap-calc {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.content-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 1.1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.calc {
+    width: 40%;
+    height: 70%;
+    display: grid;
+    background-color: turquoise;
+}
