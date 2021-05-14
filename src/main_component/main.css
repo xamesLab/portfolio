@@ -8,9 +8,10 @@
 }
 
 .container {
-    background-color: rgb(248, 248, 248);
+    background-color: rgba(248, 248, 248, 0.9);
     width: 100%;
 }
+
 
 .container_op {
     background-color: rgba(248, 248, 248, 0);
@@ -33,6 +34,32 @@
 
 .content {
     grid-area: content;
+}
+
+.content-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content-header__title {
+    padding: 0.9rem 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.content-header::after,
+.content-header::before {
+    content: '';
+    margin-top: 1rem;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(132, 147, 189);
 }
 
 .info-bar {
@@ -81,3 +108,4 @@
     display: block;
     transform: scale(1.5);
 }
+

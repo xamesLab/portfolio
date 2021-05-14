@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ContentHeader from "../../main_component/ContentHeader";
 import "./Graph.css";
 
 const grid = [
@@ -40,6 +41,7 @@ function Graph() {
 
   return (
     <div className='wrap-graph'>
+      <ContentHeader>{"Обход графа"}</ContentHeader>
       {grid.map((row, i) => (
         <div key={i}>
           {row.map((val, j) => (

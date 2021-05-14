@@ -1,4 +1,5 @@
 import { Component } from "react";
+import ContentHeader from "../../main_component/ContentHeader";
 import "./Calc.css";
 
 class Calc extends Component {
@@ -97,9 +98,7 @@ class Calc extends Component {
   render() {
     return (
       <div className='wrap-calc'>
-        <div className='content-header'>
-          <h2 className='content-header__title'>Калькулятор</h2>
-        </div>
+        <ContentHeader>{"Калькулятор"}</ContentHeader>
         <div className='calc'>
           <div className='calc__display'>
             <div className='display_1'>

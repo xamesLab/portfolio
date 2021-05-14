@@ -8,10 +8,10 @@ function InfoBar() {
         <h4>Stack</h4>
       </div>
       <div className='info-bar'>
-        <img src={"images/main/atom.svg"} alt='альтернативный текст'></img>
-        <img src={"images/main/redux.png"} alt='альтернативный текст'></img>
-        <img src={"images/main/django.webp"} alt='альтернативный текст'></img>
-        <img src={"images/main/pytorch.svg"} alt='альтернативный текст'></img>
+        <img src={"/images/main/atom.svg"} alt='альтернативный текст'></img>
+        <img src={"/images/main/redux.png"} alt='альтернативный текст'></img>
+        <img src={"/images/main/django.webp"} alt='альтернативный текст'></img>
+        <img src={"/images/main/pytorch.svg"} alt='альтернативный текст'></img>
       </div>
     </div>
   );

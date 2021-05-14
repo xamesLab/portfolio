@@ -1,0 +1,17 @@
+.neu-wrap {
+    padding: 2rem;
+}
+
+.container_neu>button>span {
+    margin-right: 10px;
+}
+
+.container_neu .fst {
+    width: 400px;
+    height: 120px;
+}
+
+.container_neu .scnd {
+    width: 120px;
+    height: 120px;
+}

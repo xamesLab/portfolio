@@ -6,7 +6,9 @@ import Graph from "../components/Graph/Graph";
 import Profile from "../components/Profile/Profile";
 import Reminder from "../components/Reminder/Reminder";
 import Snake from "../components/Snake/Snake";
+import TestBtn from "../components/TestBtn/TestBtn";
 import "./main.css";
+import "./neu.css";
 
 function Content() {
   let [opacity, setOpacity] = useState(false);
@@ -18,6 +20,7 @@ function Content() {
       <Route path='/graph' component={Graph} />
       <Route path='/memo' component={Reminder} />
       <Route path='/snake' component={Snake} />
+      <Route path='/btn' component={TestBtn} />
       <Route
         path='/calc'
         component={() => <Calc setProp={setOpacity} prop={opacity} />}

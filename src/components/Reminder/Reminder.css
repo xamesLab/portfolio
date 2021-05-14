@@ -1,0 +1,15 @@
+.wrap-memo {
+    position: relative;
+    height: 100%;
+    padding: 4rem 1rem;
+}
+
+.tabs__btn {
+    width: 100%;
+    margin: 0 0.7rem;
+}
+
+.reminder__page {
+    margin-top: 1rem;
+    height: 15rem;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ContentHeader from "../../main_component/ContentHeader";
 import ModalInfo from "./ModalInfo";
 import "./Snake.css";
 import SnakeBar from "./SnakeBar";
@@ -186,6 +187,7 @@ class Snake extends Component {
   render() {
     return (
       <div className='wrap-snake'>
+        <ContentHeader>{"Змейка"}</ContentHeader>
         <SnakeBar
           fieldXY={this.state.fieldXY}
           setFieldX={this.setFieldX}

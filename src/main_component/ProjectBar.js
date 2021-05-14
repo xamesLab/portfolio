@@ -19,15 +19,15 @@ function ProjectBar() {
           <li>
             <NavLink to='/memo'>Памятка</NavLink>
           </li>
-          <li>Тетрис</li>
           <li>
             <NavLink to='/snake'>Змейка</NavLink>
           </li>
           <li>
             <NavLink to='/calc'>Калькулятор</NavLink>
           </li>
-          <li>test</li>
-          <li>test2</li>
+          <li>
+            <NavLink to='/btn'>testBtn</NavLink>
+          </li>
         </ul>
       </div>
     </div>

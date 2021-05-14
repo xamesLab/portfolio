@@ -1,0 +1,53 @@
+.container_neu {
+    background-color: #e0e5ec;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    position: relative;
+    box-shadow: -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001,
+    inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001,
+    inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001;
+    border-radius: 4px;
+}
+
+.neu__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e5ec;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    padding: 0.2rem 1rem;
+    position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.container_neu .off {
+    color: rgba(27,30,43,.35);
+    box-shadow: -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001,
+    inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001,
+    inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001;
+}
+
+.container_neu .active {
+    color: #1b1e2b;
+    box-shadow: 4px 4px 6px 0px rgba(255,255,255,.5),
+    -4px -4px 6px 0px rgba(116,125,136,.2),
+    inset -4px -4px 6px 0px rgba(255,255,255,.5),
+    inset 4px 4px 6px 0px rgba(116,125,136,.3);
+
+}

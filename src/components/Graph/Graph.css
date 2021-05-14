@@ -3,6 +3,7 @@
     align-items: center;
     flex-direction: column;
     padding-top: 10%;
+    position: relative;
 }
 
 .wrap-graph>div {

@@ -6,30 +6,6 @@
     position: relative;
 }
 
-.content-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.content-header__title {
-    padding: 1.1rem 1.5rem;
-}
-
-.content-header::after,
-.content-header::before {
-    content: '';
-    margin-top: 1rem;
-    height: 2px;
-    width: 100%;
-    background-color: rgb(132, 147, 189);
-}
-
 .calc {
     width: 26rem;
     height: 25rem;
