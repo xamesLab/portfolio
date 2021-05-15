@@ -85,12 +85,22 @@
 
 .project__bar {
     padding-top: 2rem;
-    padding-left: 1rem;
 }
 
-.project__bar>ul>li>ul>li {
-    padding-left: 1.5rem;
+.project__link {
+    display: block;
+    padding: 0.8rem 1.6rem;
     font-weight: 300;
+}
+
+.project__link:hover {
+    background-color: rgba(132, 147, 189, 0.5);
+}
+
+.project__bar .active {
+    padding-left: 1.5rem;
+    border-left: 0.1rem solid rgba(132, 147, 189);
+    box-shadow: 25px 0 20px -20px rgba(132, 147, 189) inset
 }
 
 .info-bar__link {

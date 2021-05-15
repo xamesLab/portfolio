@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 import "./Card.css";
+import Moto from "./moto";
 
 function Card() {
+  const imgs = {
+    blue: "/images/main/blue.webp",
+    green: "/images/main/p.webp",
+    black: "/images/main/bl.webp",
+  };
+  let [motoColor, setMotoColor] = useState(imgs.green);
   const axis = React.createRef();
 
   const moto = React.createRef();
   const logo = React.createRef();
+  const kawa = React.createRef();
   const btnsBlock = React.createRef();
   const submit = React.createRef();
 
@@ -27,6 +35,7 @@ function Card() {
     logo.current.style.transform = `translateZ(80px)`;
     btnsBlock.current.style.transform = `translateZ(50px)`;
     submit.current.style.transform = `translateZ(80px)`;
+    kawa.current.style.transform = `translateZ(40px)`;
   };
 
   const oML = (e) => {
@@ -37,6 +46,13 @@ function Card() {
     logo.current.style.transform = `translateZ(0px)`;
     btnsBlock.current.style.transform = `translateZ(0px)`;
     submit.current.style.transform = `translateZ(0px)`;
+    kawa.current.style.transform = `translateZ(0px)`;
+  };
+
+  const setColor = (e) => {
+    let newColor = e.target.dataset.c;
+    setMotoColor(imgs[newColor]);
+    console.log(newColor);
   };
 
   return (
@@ -48,17 +64,25 @@ function Card() {
       <div className='card' ref={axis}>
         <div className='card__img'>
           <div className='card__circle'></div>
-          <img src={"images/main/p.png"} alt='moto' ref={moto}></img>
+          <div ref={moto}>
+            <Moto img={motoColor} />
+          </div>
         </div>
         <div className='card__info'>
           <div className='card__logo'>
             <img src={"images/main/ninja.png"} alt='logo' ref={logo}></img>
           </div>
-          <h3>kawasaki 300 ninja</h3>
+          <h3 ref={kawa}>kawasaki 300 ninja</h3>
           <div className='card__button' ref={btnsBlock}>
-            <button className='active'>green</button>
-            <button>black</button>
-            <button>blue</button>
+            <button data-c='green' onClick={setColor}>
+              green
+            </button>
+            <button data-c='black' onClick={setColor}>
+              black
+            </button>
+            <button data-c='blue' onClick={setColor}>
+              blue
+            </button>
           </div>
           <div className='card__sub' ref={submit}>
             <button>Заявка</button>

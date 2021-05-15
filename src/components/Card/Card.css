@@ -33,6 +33,11 @@ z-index: 2;
 transition: all 0.75s ease-out;
 }
 
+.card__img>div {
+    z-index: 2;
+    transition: all 0.75s ease-out;   
+}
+
 .card__circle {
 width: 9rem;
 height: 9rem;
@@ -48,9 +53,10 @@ align-items: center;
 }
 
 .card__info h3 {
-color: #2c2c2c;
+color: #202020;
 font-size: 1.5rem;
 padding: 1.7rem 0rem;
+transition: all 0.75s ease-out;
 }
 .card__logo img {
 width: 8rem;
@@ -74,7 +80,7 @@ transition: all 0.75s ease-out;
     color: #2c2c2c;
 }
 
-button.active {
+.card__button .active {
     background-color:#2c2c2c;
     color: white;
     font-weight: 400;

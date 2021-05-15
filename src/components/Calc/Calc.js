@@ -100,31 +100,34 @@ class Calc extends Component {
       <div className='wrap-calc'>
         <ContentHeader>{"Калькулятор"}</ContentHeader>
         <div className='calc'>
-          <div className='calc__display'>
+          <div className='calc__lable'>
+            <div className='bar_bg'>Calc 2021</div>
+          </div>
+          <div className='calc__display bar_bg'>
             <div className='display_1'>
               {this.state.memo} {this.state.math}
             </div>
             <div className='display_2'>{this.state.display}</div>
           </div>
-          <div className='calc__symbol-bar'>
+          <div className='calc__symbol-bar bar_bg'>
             {this.state.symbolBtn.map((sbl, i) => (
               <div
-                className='calc__btn'
+                className='calc__btn bar_bg'
                 data-s={sbl}
                 onClick={this.addSymbol}
                 key={i}>
-                {sbl}
+                <span>{sbl}</span>
               </div>
             ))}
           </div>
-          <div className='calc__operating-bar'>
+          <div className='calc__operating-bar bar_bg'>
             {Object.values(this.state.operBtn).map((oper, i) => (
               <div
-                className='calc__btn'
+                className='calc__btn bar_bg'
                 onClick={this.operating}
                 data-o={oper}
                 key={i}>
-                {oper}
+                <span>{oper}</span>
               </div>
             ))}
           </div>

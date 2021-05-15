@@ -11,22 +11,34 @@ function ProjectBar() {
       <div className='project__bar'>
         <ul>
           <li>
-            <NavLink to='/card3D'>Карточка товара</NavLink>
+            <NavLink className='project__link' to='/card3D'>
+              Карточка товара
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/graph'>Граф</NavLink>
+            <NavLink className='project__link' to='/graph'>
+              Граф
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/memo'>Памятка</NavLink>
+            <NavLink className='project__link' to='/memo'>
+              Памятка
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/snake'>Змейка</NavLink>
+            <NavLink className='project__link' to='/snake'>
+              Змейка
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/calc'>Калькулятор</NavLink>
+            <NavLink className='project__link' to='/calc'>
+              Калькулятор
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/btn'>testBtn</NavLink>
+            <NavLink className='project__link' to='/btn'>
+              testBtn
+            </NavLink>
           </li>
         </ul>
       </div>

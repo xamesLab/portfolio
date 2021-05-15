@@ -16,6 +16,11 @@
     border-radius: 4px;
 }
 
+.container_neu_around {
+    display: flex;
+    justify-content: space-around;
+}
+
 .neu__btn {
     display: flex;
     justify-content: center;
