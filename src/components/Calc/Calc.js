@@ -1,8 +1,19 @@
+// калькулятор
+// введенные данные записываются в три переменные в виде строк
+// 1:первое число, 2:второе число, 3:математический знак
+// результат расчитывается в зависимости от мат. знака
+
+// TODO:
+// 1) обработка нажатий клавиатуры
+// 2) валидация ввода
+// 3) доработка UX
+
 import { Component } from "react";
 import ContentHeader from "../../main_component/ContentHeader";
 import "./Calc.css";
 
 class Calc extends Component {
+  // стэйт для инициализации компонента
   state = {
     afterRes: false,
     display: "",
@@ -21,6 +32,7 @@ class Calc extends Component {
     },
   };
 
+  // установка\снятие прозрачного фона при монтировании\размонтировании компонента
   componentDidMount() {
     this.props.setProp(true);
   }
@@ -29,6 +41,7 @@ class Calc extends Component {
     this.props.setProp(false);
   }
 
+  // обработка нажатий на символьные кнопки
   addSymbol = (e) => {
     let sbl = e.target.dataset.s;
     if (sbl === "+/-" && this.state.display[0] !== "-") {
@@ -38,6 +51,7 @@ class Calc extends Component {
     }
   };
 
+  // обработка нажатий на операционные кнопки
   operating = (e) => {
     let val = e.target.dataset.o;
     switch (val) {
@@ -52,6 +66,8 @@ class Calc extends Component {
       case "=":
         this.result();
         break;
+
+      // обнуление введенных данных
       case "C/AC":
         this.setState({ display: "", memo: "", math: "" });
         break;
@@ -63,6 +79,7 @@ class Calc extends Component {
     }
   };
 
+  // расчет результата
   result = () => {
     let res;
 

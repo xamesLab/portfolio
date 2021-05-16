@@ -1,3 +1,10 @@
+// классическая змейка
+// на каждой итерации игрового цикла у тела змейки
+// удаляется последний элемент и дорисовывается первый
+// в зависимости от установленного направления
+// при совпадении координат "головы" и "еды"
+//в "хвост" добавляется один пустой элемент
+
 import React, { Component } from "react";
 import ContentHeader from "../../main_component/ContentHeader";
 import ModalInfo from "./ModalInfo";
@@ -6,8 +13,10 @@ import SnakeBar from "./SnakeBar";
 import SnakeBody from "./SnakeBody";
 import SnakeFood from "./SnakeFood";
 
+// состояние игрового цикла
 let gameLoop = null;
 
+// инициирующее состояние
 const initState = {
   fieldSize: [20, 20],
   fieldXY: [20, 20],
@@ -18,29 +27,34 @@ const initState = {
     [1, 1],
     [1, 2],
   ],
-  activeModal: false,
+  activeModal: false, // состояние модального окна
 };
 
 class Snake extends Component {
   state = initState;
 
+  // отслеживание нажатий на кнопки клавиатуры
   componentDidMount() {
     document.onkeydown = this.onKD;
   }
 
+  // отслеживание положения внутри поля/столкновений с собой/сбора еды
   componentDidUpdate() {
     this.checkLeave();
     this.selfCollision();
     this.checkEat();
   }
 
+  // обработка нажатий
   onKD = (e) => {
     e = e || window.event;
     if (!this.state.activeModal) {
       switch (e.keyCode) {
+        // старт/стоп
         case 32:
           !gameLoop ? this.gameStart() : this.gameOver();
           break;
+        // обновление направления
         case 38:
           this.setState({ direction: "UP" });
           break;
@@ -59,6 +73,7 @@ class Snake extends Component {
     }
   };
 
+  // движение в цикле
   moveSnake = () => {
     let cells = [...this.state.snakeCells];
     let head = cells[cells.length - 1];
@@ -92,6 +107,7 @@ class Snake extends Component {
     });
   };
 
+  // обработка столкновений с собой
   selfCollision = () => {
     let head = this.state.snakeCells[this.state.snakeCells.length - 1];
     let snake = [...this.state.snakeCells];
@@ -103,6 +119,7 @@ class Snake extends Component {
     });
   };
 
+  // обработка выхода за пределы поля
   checkLeave = () => {
     let width = this.state.fieldSize[0];
     let height = this.state.fieldSize[1];
@@ -117,6 +134,7 @@ class Snake extends Component {
     }
   };
 
+  // создание "еды" в случайном месте
   getRandomFood = () => {
     let min = 0;
     let maxX = this.state.fieldXY[0] - 1;
@@ -126,6 +144,7 @@ class Snake extends Component {
     return [x, y];
   };
 
+  // обработка сбора "еды"
   checkEat = () => {
     let head = this.state.snakeCells[this.state.snakeCells.length - 1];
     let food = this.state.food;
@@ -138,6 +157,7 @@ class Snake extends Component {
     }
   };
 
+  // увеличение "тела"
   extendSnake = () => {
     let newSnake = [...this.state.snakeCells];
     newSnake.unshift([]);
@@ -146,6 +166,7 @@ class Snake extends Component {
     });
   };
 
+  // запуск игрового цикла
   gameStart = () => {
     if (!gameLoop) {
       this.setState({ fieldSize: this.state.fieldXY });
@@ -153,12 +174,14 @@ class Snake extends Component {
     }
   };
 
+  // стоп игрового цикла и возврат к исходному состоянию
   gameOver = () => {
     clearInterval(gameLoop);
     gameLoop = null;
     this.setState(initState);
   };
 
+  // изменение состояния модального окна
   setModal = (e) => {
     e.target.blur();
     if (!this.state.activeModal) {
@@ -168,6 +191,7 @@ class Snake extends Component {
     }
   };
 
+  // установка размеров поля по Х
   setFieldX = (e) => {
     let update = !isNaN(e.target.value) ? +e.target.value : 15;
     if (update >= 30) {
@@ -176,6 +200,7 @@ class Snake extends Component {
     this.setState({ fieldXY: [update, this.state.fieldXY[1]] });
   };
 
+  // установка размеров поля по Y
   setFieldY = (e) => {
     let update = !isNaN(e.target.value) ? +e.target.value : 15;
     if (update >= 30) {

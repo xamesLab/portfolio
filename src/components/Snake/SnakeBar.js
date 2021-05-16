@@ -1,3 +1,4 @@
+// отрисовка блока меню
 import React from "react";
 
 const SnakeBar = ({ start, stop, modal, fieldXY, setFieldX, setFieldY }) => {

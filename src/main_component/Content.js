@@ -11,6 +11,7 @@ import "./main.css";
 import "./neu.css";
 
 function Content() {
+  // установка прозрачности
   let [opacity, setOpacity] = useState(false);
 
   return (
