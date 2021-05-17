@@ -6,11 +6,13 @@ function Header() {
   return (
     <div className='header'>
       <div className='header__logo'>
-        <h1>FrontEnd</h1>
+        <NavLink exact to='/'>
+          <div className='header__text'>FRONTEND dev</div>
+        </NavLink>
       </div>
       <div className='header__home'>
         <NavLink exact to='/'>
-          <img src={"/images/main/home.svg"} alt='home'></img>
+          <span className='material-icons-outlined'>home</span>
         </NavLink>
       </div>
     </div>

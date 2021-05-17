@@ -11,7 +11,9 @@ function Profile() {
           src={"images/main/photo.png"}
           alt='альтернативный текст'></img>
         <div>
+          <p>(портфолио)</p>
           <h2>Евгений Ананьин</h2>
+          <p>16.06.1987г.</p>
           <p>Москва</p>
         </div>
       </div>
@@ -52,13 +54,17 @@ function Profile() {
                   target='_blank'
                   rel='noreferrer'
                   href='https://github.com/xamesLab'>
-                  GitNub
+                  xamesLab
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div className='profile__content'></div>
+        <div className='profile__content'>
+          <div className='profile__summary'>summary</div>
+          <div className='profile__skills'>key skills</div>
+          <div className='profile__info'>доп инфо</div>
+        </div>
       </div>
     </div>
   );

@@ -59,7 +59,7 @@
 }
 
 .profile__content {
-    display: flex;
     height: 100%;
+    width: 75%;
     background-color: rgb(204, 204, 204);
 }
