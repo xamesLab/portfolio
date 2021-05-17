@@ -231,7 +231,20 @@ class Snake extends Component {
           <SnakeBody snakeCells={this.state.snakeCells} />
           <SnakeFood food={this.state.food} />
         </div>
-        <ModalInfo active={this.state.activeModal} setActive={this.setModal} />
+        <ModalInfo active={this.state.activeModal} setActive={this.setModal}>
+          <div className='modal-info__item'>
+            <p>Старт/Стоп - 'space'</p>
+            <img src={"images/main/button.svg"} alt={"space button"} />
+          </div>
+          <div className='modal-info__item'>
+            <p>Влево/Вправо/Вверх/Вниз</p>
+            <img src={"images/main/keyboard.svg"} alt={"arrow button"} />
+          </div>
+          <div className='modal-info__item'>
+            <p>Перед стартом вы можете указать размер поля (широна\высота)</p>
+            <img src={"images/main/input.png"} alt={"input"} />
+          </div>
+        </ModalInfo>
         <GitLink text={"Змейка"}>
           {
             "https://github.com/xamesLab/portfolio/tree/main/src/components/Snake"

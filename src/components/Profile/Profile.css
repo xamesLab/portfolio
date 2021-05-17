@@ -61,5 +61,34 @@
 .profile__content {
     height: 100%;
     width: 75%;
-    background-color: rgb(204, 204, 204);
+}
+
+.profile__about {
+    padding: 3rem 0 0 2rem;
+}
+
+.profile__content p {
+    padding: 1rem 2.5rem;
+    font-weight: 300;
+}
+
+.profile__info {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem 2rem;
+}
+
+.profile__btn {
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.profile__btn:hover {
+    background-color: rgba(132, 147, 189, 0.5);
+    transform: scale(1.03);
+    transition: 0.2s;
 }

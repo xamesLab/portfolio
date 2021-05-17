@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import ModalInfo from "../Snake/ModalInfo";
 import "./Profile.css";
 //import { NavLink } from "react-router-dom";
 
 function Profile() {
+  let [modal, setModal] = useState(false);
+
+  const toggleModal = (e) => {
+    e.target.blur();
+    if (!modal) {
+      setModal(true);
+    } else {
+      setModal(false);
+    }
+  };
   return (
     <div className='wrap-profile'>
       <div className='profile__header'>
@@ -61,11 +72,47 @@ function Profile() {
           </div>
         </div>
         <div className='profile__content'>
-          <div className='profile__summary'>summary</div>
-          <div className='profile__skills'>key skills</div>
-          <div className='profile__info'>доп инфо</div>
+          <div className='profile__about'>
+            <h3>О себе:</h3>
+          </div>
+          <div className='profile__summary'>
+            <p>Начинающий фронтэнд разработчик.</p>
+          </div>
+          <div className='profile__skills'>
+            <p>
+              Опыт разработки: боты для мессенджеров, торговые роботы и
+              аналитика для криптобирж, отбор данных по API и Websocket, парсинг
+              данных из вэб, нейросети, разработка на React и чистом JS.
+            </p>
+            <p>
+              Используемые навыки: JS/ES6, React, Redux, БЭМ, Python, PyTorch,
+              Django, Git.
+            </p>
+          </div>
+          <div className='profile__info'>
+            <button className='profile__btn bar_bg' onClick={toggleModal}>
+              о сайте
+            </button>
+          </div>
         </div>
       </div>
+      <ModalInfo className='modal' active={modal} setActive={toggleModal}>
+        <p className='modal__item'>
+          Сайт разработан на библиотеке React. Весь код написан лично автором.
+        </p>
+        <p className='modal__item'>
+          Сайт создан в качестве портфолио и дорабатывается. Если вам попался
+          баг, значит я до него еще не добрался.
+        </p>
+        <p className='modal__item'>
+          В процессе проработки находится "адаптивнось" и "кроссбраузерность".{" "}
+          <i>Существуют проблемы с отображением в браузере Safari.</i>
+        </p>
+        <p className='modal__item'>
+          Дизайн сайта не претендует на овации, а просто "чтобы был", отложен в
+          "долгий ящик"
+        </p>
+      </ModalInfo>
     </div>
   );
 }

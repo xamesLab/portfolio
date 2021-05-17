@@ -185,4 +185,9 @@ background-size: cover;
     font-weight: 300;
 }
 
+.modal__item {
+    font-weight: 300;
+    padding: 0.5rem 1rem;
+}
+
 

@@ -17,12 +17,12 @@ function ProjectBar() {
           </li>
           <li>
             <NavLink className='project__link' to='/graph'>
-              Граф
+              Обход графа
             </NavLink>
           </li>
           <li>
             <NavLink className='project__link' to='/memo'>
-              Памятка
+              Памятка JS
             </NavLink>
           </li>
           <li>
