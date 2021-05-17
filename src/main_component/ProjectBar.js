@@ -6,7 +6,7 @@ function ProjectBar() {
   return (
     <div className='container project'>
       <div className='container__head'>
-        <h4>Projects</h4>
+        <h4>Проекты</h4>
       </div>
       <div className='project__bar'>
         <ul>
@@ -37,7 +37,7 @@ function ProjectBar() {
           </li>
           <li>
             <NavLink className='project__link' to='/btn'>
-              testBtn
+              Неоморфизм
             </NavLink>
           </li>
         </ul>

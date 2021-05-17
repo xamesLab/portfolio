@@ -4,10 +4,10 @@ import "./Reminder.css";
 
 function Tabs() {
   let btnStyle = new Map([
-    ["array", ["off", "array text"]],
-    ["bool", ["off", "bool text"]],
-    ["obj", ["off", "obj text"]],
-    ["proto", ["off", "proto text"]],
+    ["array", ["off", "массив"]],
+    ["bool", ["off", "bool"]],
+    ["obj", ["off", "объекты"]],
+    ["proto", ["off", "прототипы"]],
   ]);
 
   let item = [];

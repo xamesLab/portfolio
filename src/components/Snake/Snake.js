@@ -7,6 +7,7 @@
 
 import React, { Component } from "react";
 import ContentHeader from "../../main_component/ContentHeader";
+import GitLink from "../../main_component/GitLink";
 import ModalInfo from "./ModalInfo";
 import "./Snake.css";
 import SnakeBar from "./SnakeBar";
@@ -231,6 +232,11 @@ class Snake extends Component {
           <SnakeFood food={this.state.food} />
         </div>
         <ModalInfo active={this.state.activeModal} setActive={this.setModal} />
+        <GitLink text={"Змейка"}>
+          {
+            "https://github.com/xamesLab/portfolio/tree/main/src/components/Snake"
+          }
+        </GitLink>
       </div>
     );
   }

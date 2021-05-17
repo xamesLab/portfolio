@@ -5,13 +5,22 @@ function InfoBar() {
   return (
     <div className='container info-bar__info'>
       <div className='container__head'>
-        <h4>Stack</h4>
+        <h4>Стэк</h4>
       </div>
       <div className='info-bar'>
-        <img src={"/images/main/atom.svg"} alt='альтернативный текст'></img>
-        <img src={"/images/main/redux.png"} alt='альтернативный текст'></img>
-        <img src={"/images/main/django.webp"} alt='альтернативный текст'></img>
-        <img src={"/images/main/pytorch.svg"} alt='альтернативный текст'></img>
+        <div className='info-bar__img'>
+          <img src={"/images/main/atom.svg"} alt='react'></img>
+        </div>
+        <div className='info-bar__img'>
+          <img src={"/images/main/css.webp"} alt='css3'></img>
+        </div>
+        <div className='info-bar__img'>
+          <img src={"/images/main/es6.webp"} alt='es6'></img>
+        </div>
+
+        <div className='info-bar__img'>
+          <img src={"/images/main/html.webp"} alt='html5'></img>
+        </div>
       </div>
     </div>
   );

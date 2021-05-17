@@ -1,4 +1,5 @@
 import React from "react";
+import GitLink from "../../main_component/GitLink";
 import "./TestBtn.css";
 
 function TestBtn() {
@@ -16,6 +17,11 @@ function TestBtn() {
           <span>sc</span>
         </button>
       </div>
+      <GitLink text={"Неоморфизм"}>
+        {
+          "https://github.com/xamesLab/portfolio/tree/main/src/components/TestBtn"
+        }
+      </GitLink>
     </div>
   );
 }

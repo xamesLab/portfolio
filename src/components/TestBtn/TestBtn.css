@@ -1,5 +1,7 @@
 .neu-wrap {
     padding: 3rem 2rem;
+    height: 100%;
+    position: relative;
 }
 
 .container_neu>button>span {

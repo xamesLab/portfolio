@@ -1,12 +1,12 @@
 import React from "react";
 
-function ArrayPage() {
+function ObjPage() {
   return (
     <div className=''>
-      <h3>Массивы</h3>
+      <h3>Объекты</h3>
       <h4>В разработке</h4>
     </div>
   );
 }
 
-export default ArrayPage;
+export default ObjPage;

@@ -4,6 +4,7 @@
 // изменяется z и наклон элементов относительно центральных осей x,y
 
 import React, { useState } from "react";
+import GitLink from "../../main_component/GitLink";
 import "./Card.css";
 import Moto from "./moto";
 
@@ -73,7 +74,6 @@ function Card() {
   const setColor = (e) => {
     let newColor = e.target.dataset.c;
     setMotoColor(imgs[newColor]);
-    console.log(newColor);
   };
 
   return (
@@ -82,6 +82,13 @@ function Card() {
       onMouseMove={oMM}
       onMouseEnter={oME}
       onMouseLeave={oML}>
+      <div
+        className='card__blur'
+        onMouseEnter={(e) => {
+          e.target.style = "display: none;";
+        }}>
+        <p>3D эффект при наведении</p>
+      </div>
       <div className='card' ref={axis}>
         <div className='card__img'>
           <div className='card__circle'></div>
@@ -110,6 +117,9 @@ function Card() {
           </div>
         </div>
       </div>
+      <GitLink text={"Карточка товара"}>
+        {"https://github.com/xamesLab/portfolio/tree/main/src/components/Card"}
+      </GitLink>
     </div>
   );
 }

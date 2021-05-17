@@ -8,9 +8,11 @@ function Header() {
       <div className='header__logo'>
         <h1>FrontEnd</h1>
       </div>
-      <NavLink exact to='/'>
-        Main page
-      </NavLink>
+      <div className='header__home'>
+        <NavLink exact to='/'>
+          <img src={"/images/main/home.svg"} alt='home'></img>
+        </NavLink>
+      </div>
     </div>
   );
 }

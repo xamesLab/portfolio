@@ -20,7 +20,7 @@ function MainApp() {
           <Content />
           <ProjectBar />
         </div>
-        <div className='main__footer'>@frontend 2021</div>
+        <div className='main__footer'>&copy; xamesLab 2021</div>
       </div>
     </BrowserRouter>
   );

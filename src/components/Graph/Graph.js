@@ -19,6 +19,7 @@
 
 import React, { useState } from "react";
 import ContentHeader from "../../main_component/ContentHeader";
+import GitLink from "../../main_component/GitLink";
 import "./Graph.css";
 
 // массив для отрисовки графа
@@ -91,6 +92,9 @@ function Graph() {
           ))}
         </div>
       ))}
+      <GitLink text={"Обход графа"}>
+        {"https://github.com/xamesLab/portfolio/tree/main/src/components/Graph"}
+      </GitLink>
     </div>
   );
 }

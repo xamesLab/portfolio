@@ -10,6 +10,7 @@
 
 import { Component } from "react";
 import ContentHeader from "../../main_component/ContentHeader";
+import GitLink from "../../main_component/GitLink";
 import "./Calc.css";
 
 class Calc extends Component {
@@ -149,6 +150,11 @@ class Calc extends Component {
             ))}
           </div>
         </div>
+        <GitLink text={"Калькулятор"}>
+          {
+            "https://github.com/xamesLab/portfolio/tree/main/src/components/Calc"
+          }
+        </GitLink>
       </div>
     );
   }
