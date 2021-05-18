@@ -27,8 +27,9 @@
     border-bottom: 1px solid rgba(255,255,255, 0.1);
     border-right: 1px solid rgba(255,255,255, 0.1);
     border-radius: 3px;
-    -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+   
 }
 
 .calc__lable {
@@ -113,6 +114,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     font-size: 1.5rem;
     cursor: pointer;
 } 

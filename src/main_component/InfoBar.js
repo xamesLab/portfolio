@@ -12,14 +12,14 @@ function InfoBar() {
           <img src={"/images/main/atom.svg"} alt='react'></img>
         </div>
         <div className='info-bar__img'>
-          <img src={"/images/main/css.webp"} alt='css3'></img>
+          <img src={"/images/main/css.png"} alt='css3'></img>
         </div>
         <div className='info-bar__img'>
-          <img src={"/images/main/es6.webp"} alt='es6'></img>
+          <img src={"/images/main/es6.png"} alt='es6'></img>
         </div>
 
         <div className='info-bar__img'>
-          <img src={"/images/main/html.webp"} alt='html5'></img>
+          <img src={"/images/main/html.png"} alt='html5'></img>
         </div>
       </div>
     </div>

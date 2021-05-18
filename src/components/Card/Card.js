@@ -11,9 +11,9 @@ import Moto from "./moto";
 function Card() {
   // список изображений подгружаемых в карточку
   const imgs = {
-    blue: "/images/main/blue.webp",
-    green: "/images/main/p.webp",
-    black: "/images/main/bl.webp",
+    blue: "/images/main/blue.png",
+    green: "/images/main/p.png",
+    black: "/images/main/bl.png",
   };
 
   let [motoColor, setMotoColor] = useState(imgs.green);
