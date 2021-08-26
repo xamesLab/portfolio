@@ -11,9 +11,9 @@ import Moto from "./moto";
 function Card() {
   // список изображений подгружаемых в карточку
   const imgs = {
-    blue: "/images/main/blue.png",
-    green: "/images/main/p.png",
-    black: "/images/main/bl.png",
+    blue: "images/main/blue.png",
+    green: "images/main/p.png",
+    black: "images/main/bl.png",
   };
 
   let [motoColor, setMotoColor] = useState(imgs.green);
@@ -78,41 +78,43 @@ function Card() {
 
   return (
     <div
-      className='wrap-card'
+      className="wrap-card"
       onMouseMove={oMM}
       onMouseEnter={oME}
-      onMouseLeave={oML}>
+      onMouseLeave={oML}
+    >
       <div
-        className='card__blur'
+        className="card__blur"
         onMouseEnter={(e) => {
           e.target.style = "display: none;";
-        }}>
+        }}
+      >
         <p>3D эффект при наведении</p>
       </div>
-      <div className='card' ref={axis}>
-        <div className='card__img'>
-          <div className='card__circle'></div>
+      <div className="card" ref={axis}>
+        <div className="card__img">
+          <div className="card__circle"></div>
           <div ref={moto}>
             <Moto img={motoColor} />
           </div>
         </div>
-        <div className='card__info'>
-          <div className='card__logo'>
-            <img src={"images/main/ninja.png"} alt='logo' ref={logo}></img>
+        <div className="card__info">
+          <div className="card__logo">
+            <img src={"images/main/ninja.png"} alt="logo" ref={logo}></img>
           </div>
           <h3 ref={kawa}>kawasaki 300 ninja</h3>
-          <div className='card__button' ref={btnsBlock}>
-            <button data-c='green' onClick={setColor}>
+          <div className="card__button" ref={btnsBlock}>
+            <button data-c="green" onClick={setColor}>
               green
             </button>
-            <button data-c='black' onClick={setColor}>
+            <button data-c="black" onClick={setColor}>
               black
             </button>
-            <button data-c='blue' onClick={setColor}>
+            <button data-c="blue" onClick={setColor}>
               blue
             </button>
           </div>
-          <div className='card__sub' ref={submit}>
+          <div className="card__sub" ref={submit}>
             <button>Заявка</button>
           </div>
         </div>
